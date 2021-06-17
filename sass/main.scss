@@ -1,0 +1,454 @@
+@font-face
+{
+  font-family: 'Shrikhand';
+  src: url('fonts/Shrikhand.otf');
+  font-weight: normal;
+}
+@font-face
+{
+  font-family: 'Roboto';
+   src: url('fonts/Roboto.ttf');
+  font-weight: normal;
+}
+
+$greyhead: #CECECE;
+$grey-exp: #F2F2F2;
+$violet: #9356DC;
+$pink: #FF79DA;
+$grey-shadow: #D8D4EA;
+$light-green: #99E2D0;
+$grey_position: #EFEFEF;
+
+@keyframes plat {
+  
+0%{
+  opacity: 0;
+  transform: translate(0px,15px)
+  
+ }
+100%{
+  opacity: 1;
+  transform: translate(0px,5px)
+  
+ }
+
+}
+
+.flex
+{
+  display: flex;
+}
+.column
+{
+  flex-direction: column;
+}
+.center
+{
+  align-items: center;
+}
+.space
+{ 
+  margin-bottom: 0px;
+}
+.space-1
+{
+  margin-top: 0px;
+}
+.space2
+{ 
+  justify-content: space-between;
+}
+.size
+{
+  width: 100%;
+  border-radius: 20px 20px 0% 0%;
+}
+
+p
+{
+  font-family: 'Roboto';
+  font-size: 1em;
+}
+h2, h1
+{
+  font-family: 'Roboto';
+
+}
+h1
+{
+  font-size: 1em;
+}
+//block header//
+.head0
+{
+  text-align: center;
+  border-bottom: 2px solid $greyhead;
+  margin-right: -10px;
+  margin-left: -10px;
+    h4 { font-family: 'Shrikhand';
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+}
+//block header//
+
+
+.bloc-position
+{
+  justify-content: center;
+  background-color: $grey_position;
+  margin-right: -10px;
+margin-left: -10px;
+     img{  width: auto;
+      height: 18px;
+      padding-right: 20px;
+      margin-top: 15px;
+     }
+     p{
+      margin-right: 40px;
+    }
+}
+
+.bloc-explore
+{
+text-align: center;
+background-color: $grey-exp;
+padding-top: 5px;
+margin-right: -10px;
+margin-left: -10px;
+     &__text{
+      margin-bottom: 30px;
+     }
+  button{ font-family: 'Roboto';
+    color: white;
+    padding: 15px 25px 15px 25px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    background: linear-gradient($pink, $violet);
+    margin-bottom: 70px;
+    border: none;
+    box-shadow: 3px 4px 9px $greyhead;
+    &:hover {
+      background: linear-gradient(#f698dc, #b279f8);
+  box-shadow: 3px 10px 9px $greyhead; 
+    }
+  }
+}
+
+.bloc-function
+{
+  margin-bottom: 40px;
+     h2{  margin-right: 130px;
+      margin-top: 50px;
+    margin-bottom: 30px;
+     }
+     &__card{ background-color: $grey-exp;
+      border-radius: 20px;
+      padding-top: 10px;
+      margin-left: 20px;
+      margin-bottom: 30px;
+      box-shadow: 3px 4px 9px $grey-shadow;
+      padding-right: 70px;
+      white-space: nowrap;
+      padding-bottom: 10px;
+      margin-right: 10px;
+        &:hover{ background-color: rgb(251, 216, 251);
+           box-shadow: 3px 9px 9px $grey-shadow
+          }
+      .numbers{ background-color: $violet;
+        border-radius: 100%;
+        padding-right: 7px;
+        padding-left: 7px;
+        margin-left: -12px;
+         .numero{ font-size: 0.9em;
+          margin-top: 3px;
+          margin-bottom: 3px;
+          color: white;
+          margin-left: 3px;}
+      }
+      img{ width: auto;
+        height: 17px;
+      margin-left: 25px; 
+    }
+      p{ margin-left: 30px;
+      }
+ }
+}
+
+.bloc-resto
+{
+  background-color: $grey-exp;
+  padding-bottom: 60px;
+  padding-right: 10px;
+  margin-right: -15px;
+margin-left: -15px;
+    h2{  margin-right: 185px;
+      margin-top: 60px;
+      margin-bottom: 25px;
+       }
+     &__card{ background-color: white;
+      text-decoration: none;
+      margin-top: 5px;
+      border-radius: 20px;
+      box-shadow: 0px 3px 15px $grey-shadow;
+      margin-left: 10px;
+      margin-bottom: 20px;
+      position: relative;
+      width: 90%;
+       &:hover{ box-shadow: 0px 16px 15px $grey-shadow;
+                }
+        &--little{ background-color: $light-green;
+        position: absolute;
+        z-index: 2;
+        padding-right: 5px;
+        padding-left: 5px; 
+        right: 10px;
+        top: 10px;
+        border-radius: 2px;
+          p{ font-size: 0.9em;
+            margin-top: 1px;
+            padding-top: 5px;
+            color: green;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+          }
+         }
+          &__ending{  margin-left: 10px;
+            white-space: nowrap;
+             p{ margin-top: -5px;}  
+            }
+            i{ position: absolute;
+              right: 10px;
+              bottom: 30px;
+              padding-right: 10px;
+              font-size: 23px;
+              &:hover::after {
+                content: "\f004";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 0;
+                padding-right: 10px;
+                background: linear-gradient(
+                  to bottom left,
+                  $violet,
+                  53%,
+                  $pink
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                opacity: 1;
+                animation: favorite 250ms linear forwards;
+              }
+          
+            }
+     }
+}
+
+footer
+  {
+    background-color: #303030;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    h1{font-family: 'Shrikhand';
+      margin-left: 10px;
+      color: white;
+      font-size: 1.1em;
+      margin-right: 260px;
+     }
+  ul
+    { font-family: 'Roboto';
+    color: white;
+    list-style: none;
+    padding-left: 10px;
+    white-space: nowrap;
+    li{ margin-bottom: 11px;
+    }
+  }
+  img{ width: auto;
+    height: 13px;
+    margin-right: 10px;
+    margin-top: 2px;
+  }
+
+}
+
+
+//page restaurants//
+
+
+.card h4, header h4
+{ font-family: 'Shrikhand';}
+
+p, h2, h1, .card button, strong
+{ font-family: 'Roboto';}
+
+p
+{font-size: 0.9em;}
+
+h1
+{font-size: 1em;}
+
+.size1{ width: auto;}
+
+.head1
+{
+  text-align: center;
+  border-bottom: 2px solid $greyhead;
+  margin-right: -10px;
+  margin-left: -10px;
+  h4{ font-size: 2em;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    margin-top: 20px;
+  }
+  img{ height: 20px;
+    margin-left: 20px;
+  }
+}
+.photo
+{
+  width: 110%;
+  height: 280px;
+  margin-left: -10px;
+  position: relative;
+  z-index: 1;
+}
+
+.card
+{
+position: relative;
+z-index: 2;
+margin-top: -60px;
+background-color: #F2F2F2;
+margin-right: -10px;
+margin-left: -10px;
+border-radius: 40px 40px 0% 0%;
+padding-left: 15px;
+padding-right: 10px;
+ h4{ font-size: 1.8em;
+  margin-right: 90px;
+ }
+ .title_2{
+   margin-right: 30px;
+   white-space: nowrap;
+ }
+ button{ background-color: #9356DC;
+  color: white;
+  padding: 15px 45px 15px 45px;
+  border-radius: 25px;
+  font-size: 0.9em;
+  background: linear-gradient(#FF79DA, #9356DC);
+  margin-bottom: 70px;
+  border: none;
+  margin-top: 50px;
+  box-shadow: 3px 5px 9px $greyhead;
+    &:hover {
+      background: linear-gradient(#f698dc, #b279f8);
+  box-shadow: 3px 10px 9px $greyhead; 
+    }
+ }
+}
+.heart
+{
+  height: 22px;
+  margin-top: 43px;
+  padding-right: 23px;
+}
+
+.repas
+{
+  width: 95%;
+  .title_1
+  { border-bottom: 4px solid $light-green;
+    width: 10%;
+    padding-bottom: 5px;
+  }
+  .title
+  {
+    border-bottom: 4px solid $light-green;
+    width: 10%;
+    padding-bottom: 5px;
+    margin-top: 40px;
+  }
+  .plat
+  {
+    background-color: white;
+    padding-left: 10px;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 3px 8px 9px #D8D4EA;
+    animation: 2s ease-in-out  plat;
+    transform: translate(0px,5px);
+    transition-duration: 2000ms;
+   &:hover 
+   { 
+    .name{ width: 80%;
+      p{ text-overflow: ellipsis;}
+    }
+    .check{ width: 20%;
+           animation-direction: reverse;
+       i{ transform: rotate(1turn);
+      }
+    }
+   }
+   .name{ width: 100%;
+     h1{
+       margin-bottom: 5px;
+       }
+       p{overflow: hidden;
+         white-space: nowrap;}
+    }
+
+   strong{ 
+     font-size: 0.9em;
+    margin-right: 20px;
+   }
+   .check{
+    overflow: hidden;
+    background-color: #99E2D0;
+    width: 0%;
+    border-radius: 0px 15px 15px 0px;
+    text-align: center;
+    transition-duration: 500ms;
+    
+    
+      i{
+        color: white;
+        font-size: 1.5em;
+        margin-top: 25px;
+        transition: ease-in-out;
+        transition-property: transform;
+        transition-duration: 500ms;
+        padding: 0px;
+      }
+   
+  
+  
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  }
+
+
+
+
+
+
+}

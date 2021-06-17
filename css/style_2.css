@@ -10,9 +10,32 @@
   src: url('fonts/Roboto.ttf');
   font-weight: normal;
 }
+.flex
+{ display: flex;}
+
+.column
+{ flex-direction: column;}
+
+.center
+{ align-items: center;}
+
+.space2
+{ justify-content: space-between;}
+
+.size1
+{ width: auto;}
+
+
+footer h1, .card h4, header h4
+{ font-family: 'Shrikhand';}
+
+p, h2, h1, .card button, footer ul, strong
+{ font-family: 'Roboto';}
+
+
 header h4
 {
-  font-family: 'Shrikhand';
+ 
   font-size: 2em;
   margin-bottom: 10px;
   margin-left: 60px;
@@ -25,19 +48,13 @@ header
   border-bottom: 2px solid #CECECE;
   margin-right: -10px;
   margin-left: -10px;
-  display: flex;
-  align-items: center;
 }
-p
+p, strong
 {
-  font-family: 'Roboto';
+  
   font-size: 0.9em;
 }
-h2, h1
-{
-  font-family: 'Roboto';
 
-}
 h1
 {
   font-size: 1em;
@@ -52,13 +69,13 @@ h1
 }
 .icon
 {
-  width: auto;
+  
   height: 20px;
   margin-left: 20px;
 }
 .heart
 {
-  width: auto;
+ 
   height: 22px;
   margin-top: 43px;
   padding-right: 23px;
@@ -75,41 +92,30 @@ margin-left: -10px;
 border-radius: 40px 40px 0% 0%;
 padding-left: 15px;
 padding-right: 10px;
-display: flex;
-flex-direction: column;
-align-items: center;
+
+
 }
+
 .card h4
 {
-font-family: 'Shrikhand';
+
 font-size: 1.8em;
 margin-right: 90px;
 }
-.name_hearth
-{
-  display: flex;
-  justify-content: space-between;
-}
+
 .repas
 {
-  margin-right: 120px;
+  width: 100%;
 }
-.repas-1
-{
-  margin-right: 100px;
-}
-.repas-2
-{
-  margin-right: 130px;
-}
-.surline
+
+.title
 {
 border-bottom: 4px solid #99E2D0;
 width: 10%;
 padding-bottom: 5px;
 margin-top: 40px;
 }
-.surline_1
+.title_1
 {
   border-bottom: 4px solid #99E2D0;
   width: 10%;
@@ -118,55 +124,64 @@ margin-top: 40px;
 .plat
 {
 background-color: white;
-padding-right: 20px;
 padding-left: 10px;
 border-radius: 20px;
 margin-top: 20px;
-width: 125%;
-}
-.plat-entrée
-{
-  background-color: white;
 
-  padding-left: 10px;
-  border-radius: 20px;
-  margin-top: 20px;
-  width: 145%;
 }
-.plat-dessert
+.plat:hover .column{
+width: 80%;
+}
+.plat:hover .check
 {
-  background-color: white;
-  padding-left: 10px;
-  border-radius: 20px;
-  margin-top: 20px;
-  width: 150%;
+  width: 20%;
 }
+.plat:hover .check i
+{ transform: rotate(1turn);}
+.plat:hover .column p
+{overflow: hidden;}
+strong
+{
+  margin-top: 13px;
+  margin-right: 20px;
+}
+.column { width: 100%;
+
+}
+.check{
+  overflow: hidden;
+  background-color: #99E2D0;
+  width: 0%;
+  border-radius: 0px 20px 20px 0px;
+  text-align: center;
+
+}
+.check i 
+{
+ color: white;
+ font-size: 1.5em;
+ margin-top: 25px;
+ transition: ease-in-out;
+transition-property: transform;
+transition-duration: 500ms;
+padding: 0px;
+ 
+}
+
 .plat h1, .plat-dessert h1, .plat-entrée h1
 {
   margin-bottom: -5px;
-  padding-top: 20px;
 }
-.plat, .plat-dessert, .plat-entrée
+.plat, .plat-dessert, .plat-entrée, button
 {
   box-shadow: 3px 4px 9px #D8D4EA;
 }
 
-.plat_1
-{
-display: flex;
-justify-content: space-between;
-padding-right: 20px;
-}
-.plat_2
-{
-  display: flex;
-  justify-content: space-between;
 
-}
 .card button
 {
  background-color: #9356DC;
-    font-family: 'Roboto';
+    
     color: white;
     padding: 15px 25px 15px 25px;
     border-radius: 25px;
@@ -175,7 +190,10 @@ padding-right: 20px;
     margin-bottom: 70px;
     border: none;
     margin-top: 50px;
+    margin-left: 100px;
+    
   }
+  button:hover{ box-shadow: 6px 8px 9px #D8D4EA; }
   footer
   {
     background-color: #303030;
@@ -183,13 +201,14 @@ padding-right: 20px;
     margin-left: -15px;
     padding-top: 10px;
     padding-bottom: 20px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    
+    padding-left: 10px;
+    
+    
   }
   footer img
   {
-    width: auto;
+    
     height: 14px;
     margin-right: 12px;
     margin-top: 2px;
@@ -201,7 +220,7 @@ padding-right: 20px;
   }
   footer h1
   {
-    font-family: 'Shrikhand';
+    
     margin-left: 10px;
     color: white;
     font-size: 1.1em;
@@ -210,21 +229,17 @@ padding-right: 20px;
   }
   footer ul
   {
-    font-family: 'Roboto';
+    
     color: white;
     list-style: none;
     padding-left: 10px;
     margin-right: 159px;
     white-space: nowrap;
   }
-  .foot, .foot_1
-  {
-    display: flex;
-
-  }
+  
   .foot_1 img
   {
-    width: auto;
+    
     height: 11px;
     margin-right: 10px;
   }

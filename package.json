@@ -1,0 +1,23 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "version_1",
+  "main": "index.js",
+  "scripts": {
+    "sass" : "sass --watch ./sass/main.scss",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdramane27/abdrahmanesy_3_20052021.git"
+  },
+  "keywords": [
+    "ohmyfood"
+  ],
+  "author": "abdrahmanesy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdramane27/abdrahmanesy_3_20052021/issues"
+  },
+  "homepage": "https://github.com/abdramane27/abdrahmanesy_3_20052021#readme"
+}
