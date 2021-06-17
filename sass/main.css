@@ -457,12 +457,6 @@ h1 {
   margin-top: 20px;
   -webkit-box-shadow: 3px 8px 9px #D8D4EA;
           box-shadow: 3px 8px 9px #D8D4EA;
-  -webkit-animation: 2s ease-in-out  plat;
-          animation: 2s ease-in-out  plat;
-  -webkit-transform: translate(0px, 5px);
-          transform: translate(0px, 5px);
-  -webkit-transition-duration: 2000ms;
-          transition-duration: 2000ms;
 }
 
 .repas .plat:hover .name {
@@ -475,7 +469,6 @@ h1 {
 
 .repas .plat:hover .check {
   width: 20%;
-  animation-direction: reverse;
 }
 
 .repas .plat:hover .check i {
@@ -485,6 +478,8 @@ h1 {
 
 .repas .plat .name {
   width: 100%;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 
 .repas .plat .name h1 {
@@ -507,8 +502,8 @@ h1 {
   width: 0%;
   border-radius: 0px 15px 15px 0px;
   text-align: center;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 
 .repas .plat .check i {
