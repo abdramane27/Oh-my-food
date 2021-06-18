@@ -36,6 +36,56 @@
   }
 }
 
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+  }
+}
+
+.loader {
+  border: 5px dotted black;
+  border-top: 5px dotted black;
+  border-left: 5px dotted black;
+  border-right: 5px dotted black;
+  border-bottom: 5px dotted black;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear;
+          animation: spin 2s linear;
+  margin: auto;
+  position: absolute;
+  top: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -361,6 +411,7 @@ h1 {
   border-bottom: 2px solid #CECECE;
   margin-right: -10px;
   margin-left: -10px;
+  z-index: 1;
 }
 
 .head1 h4 {
@@ -457,10 +508,18 @@ h1 {
   margin-top: 20px;
   -webkit-box-shadow: 3px 8px 9px #D8D4EA;
           box-shadow: 3px 8px 9px #D8D4EA;
+  -webkit-animation: 2s ease-in-out  plat;
+          animation: 2s ease-in-out  plat;
+  -webkit-transform: translate(0px, 5px);
+          transform: translate(0px, 5px);
+  -webkit-transition-duration: 2000ms;
+          transition-duration: 2000ms;
 }
 
 .repas .plat:hover .name {
   width: 80%;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 
 .repas .plat:hover .name p {
@@ -478,8 +537,6 @@ h1 {
 
 .repas .plat .name {
   width: 100%;
-  -webkit-transition: width 1s ease-in-out;
-  transition: width 1s ease-in-out;
 }
 
 .repas .plat .name h1 {
