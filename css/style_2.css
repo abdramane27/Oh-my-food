@@ -129,7 +129,7 @@ border-radius: 20px;
 margin-top: 20px;
 
 }
-.plat:hover .column{
+.plat:hover .name{
 width: 80%;
 }
 .plat:hover .check
@@ -138,8 +138,7 @@ width: 80%;
 }
 .plat:hover .check i
 { transform: rotate(1turn);}
-.plat:hover .column p
-{overflow: hidden;}
+
 strong
 {
   margin-top: 13px;

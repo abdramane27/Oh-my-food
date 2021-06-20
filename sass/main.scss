@@ -20,32 +20,32 @@ $light-green: #99E2D0;
 $grey_position: #EFEFEF;
 
 @keyframes plat {
-  
+
 0%{
   opacity: 0;
   transform: translate(0px,15px)
-  
+
  }
 100%{
   opacity: 1;
   transform: translate(0px,5px)
-  
+
  }
 
 }
 
 @keyframes spin {
   0%{ transform: rotate(0deg);}
-  
+
   100%{ transform: rotate(360deg);
         display: none;
         visibility: hidden;
         overflow: hidden;
-       
-        
-  
+
+
+
   }
-  
+
 }
 .loader{ border: 5px dotted black;
   border-top: 5px dotted black;
@@ -61,7 +61,7 @@ $grey_position: #EFEFEF;
   top: 1; left: 0; right: 0; bottom: 0;
   z-index: 3;
   animation-fill-mode: forwards;
-  
+
 }
 
 .flex
@@ -77,7 +77,7 @@ $grey_position: #EFEFEF;
   align-items: center;
 }
 .space
-{ 
+{
   margin-bottom: 0px;
 }
 .space-1
@@ -85,14 +85,19 @@ $grey_position: #EFEFEF;
   margin-top: 0px;
 }
 .space2
-{ 
+{
   justify-content: space-between;
 }
 .size
 {
   width: 100%;
+}
+.border
+{
   border-radius: 20px 20px 0% 0%;
 }
+
+
 
 p
 {
@@ -113,8 +118,7 @@ h1
 {
   text-align: center;
   border-bottom: 2px solid $greyhead;
-  margin-right: -10px;
-  margin-left: -10px;
+
     h4 { font-family: 'Shrikhand';
       font-size: 2em;
       margin-bottom: 10px;
@@ -127,8 +131,7 @@ h1
 {
   justify-content: center;
   background-color: $grey_position;
-  margin-right: -10px;
-margin-left: -10px;
+
      img{  width: auto;
       height: 18px;
       padding-right: 20px;
@@ -144,8 +147,7 @@ margin-left: -10px;
 text-align: center;
 background-color: $grey-exp;
 padding-top: 5px;
-margin-right: -10px;
-margin-left: -10px;
+
      &__text{
       margin-bottom: 30px;
      }
@@ -160,7 +162,7 @@ margin-left: -10px;
     box-shadow: 3px 4px 9px $greyhead;
     &:hover {
       background: linear-gradient(#f698dc, #b279f8);
-  box-shadow: 3px 10px 9px $greyhead; 
+  box-shadow: 3px 10px 9px $greyhead;
     }
   }
 }
@@ -198,7 +200,7 @@ margin-left: -10px;
       }
       img{ width: auto;
         height: 17px;
-      margin-left: 25px; 
+      margin-left: 25px;
     }
       p{ margin-left: 30px;
       }
@@ -209,9 +211,7 @@ margin-left: -10px;
 {
   background-color: $grey-exp;
   padding-bottom: 60px;
-  padding-right: 10px;
-  margin-right: -15px;
-margin-left: -15px;
+
     h2{  margin-right: 185px;
       margin-top: 60px;
       margin-bottom: 25px;
@@ -221,7 +221,6 @@ margin-left: -15px;
       margin-top: 5px;
       border-radius: 20px;
       box-shadow: 0px 3px 15px $grey-shadow;
-      margin-left: 10px;
       margin-bottom: 20px;
       position: relative;
       width: 90%;
@@ -231,7 +230,7 @@ margin-left: -15px;
         position: absolute;
         z-index: 2;
         padding-right: 5px;
-        padding-left: 5px; 
+        padding-left: 5px;
         right: 10px;
         top: 10px;
         border-radius: 2px;
@@ -247,12 +246,11 @@ margin-left: -15px;
          }
           &__ending{  margin-left: 10px;
             white-space: nowrap;
-             p{ margin-top: -5px;}  
+             p{ margin-top: -5px;}
             }
             i{ position: absolute;
               right: 10px;
               bottom: 30px;
-              padding-right: 10px;
               font-size: 23px;
               &:hover::after {
                 content: "\f004";
@@ -264,7 +262,6 @@ margin-left: -15px;
                 right: 0;
                 bottom: 0;
                 z-index: 0;
-                padding-right: 10px;
                 background: linear-gradient(
                   to bottom left,
                   $violet,
@@ -276,7 +273,7 @@ margin-left: -15px;
                 opacity: 1;
                 animation: favorite 250ms linear forwards;
               }
-          
+
             }
      }
 }
@@ -284,8 +281,6 @@ margin-left: -15px;
 footer
   {
     background-color: #303030;
-    margin-right: -15px;
-    margin-left: -15px;
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 10px;
@@ -330,12 +325,11 @@ h1
 
 .size1{ width: auto;}
 
+//bloc header//
 .head1
 {
   text-align: center;
   border-bottom: 2px solid $greyhead;
-  margin-right: -10px;
-  margin-left: -10px;
   z-index: 1;
   h4{ font-size: 2em;
     margin-bottom: 10px;
@@ -361,16 +355,13 @@ position: relative;
 z-index: 2;
 margin-top: -60px;
 background-color: #F2F2F2;
-margin-right: -10px;
-margin-left: -10px;
 border-radius: 40px 40px 0% 0%;
-padding-left: 15px;
-padding-right: 10px;
+width: 100%;
  h4{ font-size: 1.8em;
   margin-right: 90px;
  }
  .title_2{
-   margin-right: 30px;
+   margin-right: 20px;
    white-space: nowrap;
  }
  button{ background-color: #9356DC;
@@ -385,7 +376,7 @@ padding-right: 10px;
   box-shadow: 3px 5px 9px $greyhead;
     &:hover {
       background: linear-gradient(#f698dc, #b279f8);
-  box-shadow: 3px 10px 9px $greyhead; 
+  box-shadow: 3px 10px 9px $greyhead;
     }
  }
 }
@@ -396,7 +387,7 @@ padding-right: 10px;
   padding-right: 23px;
 }
 
-.repas
+.repas 
 {
   width: 95%;
   .title_1
@@ -417,12 +408,13 @@ padding-right: 10px;
     padding-left: 10px;
     border-radius: 15px;
     margin-top: 20px;
+    width: 95%;
     box-shadow: 3px 8px 9px #D8D4EA;
     animation: 2s ease-in-out  plat;
     transform: translate(0px,5px);
     transition-duration: 2000ms;
-   &:hover 
-   { 
+   &:hover
+   {
     .name{ width: 80%;
            transition: width 1s ease-in-out;
       p{ text-overflow: ellipsis;}
@@ -440,7 +432,7 @@ padding-right: 10px;
          white-space: nowrap;}
     }
 
-   strong{ 
+   strong{
      font-size: 0.9em;
     margin-right: 20px;
    }
@@ -451,7 +443,7 @@ padding-right: 10px;
     border-radius: 0px 15px 15px 0px;
     text-align: center;
     transition: width 1s ease-in-out;
-    
+
       i{
         color: white;
         font-size: 1.5em;
@@ -461,19 +453,19 @@ padding-right: 10px;
         transition-duration: 500ms;
         padding: 0px;
       }
-   
-  
-  
-  
-  
+
+
+
+
+
   }
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   }
 
 
