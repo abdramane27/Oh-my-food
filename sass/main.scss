@@ -113,7 +113,7 @@ h1
 {
   font-size: 1em;
 }
-//block header//
+
 .head0
 {
   text-align: center;
@@ -124,10 +124,7 @@ h1
       margin-bottom: 10px;
     }
 }
-//block header//
-
-
-.bloc-position //position géographique//
+.bloc-position 
 {
   justify-content: center;
   background-color: $grey_position;
@@ -167,7 +164,7 @@ padding-top: 5px;
   }
 }
 
-.bloc-function //bloc fonctionnement//
+.bloc-function 
 {
   margin-bottom: 40px;
      h2{  margin-right: 130px;
@@ -308,7 +305,7 @@ footer
 }
 
 
-//page restaurants//
+
 
 
 .card h4, header h4
@@ -325,7 +322,7 @@ h1
 
 .size1{ width: auto;}
 
-//bloc header//
+
 .head1
 {
   text-align: center;
@@ -342,9 +339,8 @@ h1
 }
 .photo
 {
-  width: 110%;
+  width: 100%;
   height: 280px;
-  margin-left: -10px;
   position: relative;
   z-index: 1;
 }
