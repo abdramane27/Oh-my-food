@@ -36,7 +36,7 @@
   }
 }
 
-@-webkit-keyframes spin {
+@-webkit-keyframes loader {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -44,13 +44,12 @@
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-    display: none;
-    visibility: hidden;
-    overflow: hidden;
+            display: none;
+    
   }
 }
 
-@keyframes spin {
+@keyframes loader {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -58,33 +57,67 @@
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-    display: none;
-    visibility: hidden;
-    overflow: hidden;
+            display: none;
+            overflow: hidden;
+            
+            
+
   }
 }
 
+.overlay{
+  width: 200px;
+    margin: 0 auto;
+    position: relative;
+    text-align: justify;
+    overflow: hidden;
+}
+  
+
+.loader
+{
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+  text-align: justify;
+}
 .loader {
-  border: 5px dotted black;
-  border-top: 5px dotted black;
-  border-left: 5px dotted black;
-  border-right: 5px dotted black;
-  border-bottom: 5px dotted black;
-  border-radius: 100%;
-  width: 30px;
-  height: 30px;
-  -webkit-animation: spin 2s linear;
-          animation: spin 2s linear;
-  margin: auto;
+  cursor: progress;
   position: absolute;
-  top: 1;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  width: 100%;
+  height: 100%;
 }
+.loader::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10001;
+  overflow: hidden;
+  background: #0b0b0b;
+  opacity: 0.6;
+  
+}
+.loader::after {
+  box-sizing: border-box;
+  z-index: 10002;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #99E2D0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: loader 2s linear ;
+  animation-fill-mode: forwards;
+  
+}
+
+
+
 
 .flex {
   display: -webkit-box;
@@ -100,9 +133,9 @@
 }
 
 .center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: flex-start;
+      -ms-flex-align: flex-start;
+          align-items: flex-start;
 }
 
 .space {
@@ -221,10 +254,9 @@ h1 {
   margin-bottom: 30px;
   -webkit-box-shadow: 3px 4px 9px #D8D4EA;
           box-shadow: 3px 4px 9px #D8D4EA;
-  padding-right: 70px;
   white-space: nowrap;
   padding-bottom: 10px;
-  margin-right: 10px;
+  width: 90%;
 }
 
 .bloc-function__card:hover {
@@ -239,6 +271,7 @@ h1 {
   padding-right: 7px;
   padding-left: 7px;
   margin-left: -12px;
+  margin-top: 10px;
 }
 
 .bloc-function__card .numbers .numero {
@@ -253,6 +286,7 @@ h1 {
   width: auto;
   height: 17px;
   margin-left: 25px;
+  margin-top: 13px;
 }
 
 .bloc-function__card p {
@@ -267,7 +301,7 @@ h1 {
 }
 
 .bloc-resto h2 {
-  margin-right: 185px;
+  margin-left: 12px;
   margin-top: 60px;
   margin-bottom: 25px;
 }
@@ -281,6 +315,7 @@ h1 {
           box-shadow: 0px 3px 15px #D8D4EA;
   margin-bottom: 20px;
   position: relative;
+  margin-left: 17px;
   width: 90%;
   
 }
