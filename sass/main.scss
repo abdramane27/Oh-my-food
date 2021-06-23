@@ -34,61 +34,53 @@ $grey_position: #EFEFEF;
 
 }
 
-@keyframes loader {
+@keyframes spin {
   0%{ transform: rotate(0deg);}
 
   100%{ transform: rotate(360deg);
         display: none;
         visibility: hidden;
         overflow: hidden;
+ }
+}
 
-
-
+@keyframes loader {
+  0% { opacity: 0.6;
+        display: none;
+      }
+  100%{ display: none;
+        visibility: hidden;
   }
+}
 
-}
-.loader
-{
-  width: 200px;
-  margin: 0 auto;
-  position: relative;
-  text-align: justify;
-}
 .loader {
-  cursor: progress;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.loader::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 10001;
-  overflow: hidden;
-  background: #0b0b0b;
-  opacity: 0.6;
-  
-}
-.loader::after {
-  box-sizing: border-box;
-  z-index: 10002;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -25px 0 0 -25px;
-  border: 3px solid #f3f3f3;
-  border-top: 3px solid #99E2D0;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 7px solid #f3f3f398; 
+  border-top: 7px solid #3498db; 
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: loader 2s linear ;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear ;
   animation-fill-mode: forwards;
-  animation-delay: 1s;
+ 
+}
+
+.loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #303030;
+  opacity: 0.6;
+  animation: loader 2s linear;
   background-repeat: no-repeat;
-  
+  animation-fill-mode: forwards;
 }
 
 .flex
@@ -366,6 +358,7 @@ h1
   }
   img{ height: 20px;
     margin-left: 20px;
+    margin-top: 30px;
   }
 }
 .photo
@@ -390,6 +383,7 @@ width: 100%;
  .title_2{
    margin-right: 20px;
    white-space: nowrap;
+   margin-left: 10px;
  }
  button{ background-color: #9356DC;
   color: white;
@@ -398,6 +392,7 @@ width: 100%;
   font-size: 0.9em;
   background: linear-gradient(#FF79DA, #9356DC);
   margin-bottom: 70px;
+  margin-left: 90px;
   border: none;
   margin-top: 50px;
   box-shadow: 3px 5px 9px $greyhead;
@@ -436,6 +431,7 @@ width: 100%;
     border-radius: 15px;
     margin-top: 20px;
     width: 95%;
+    margin-left: 10px;
     box-shadow: 3px 8px 9px #D8D4EA;
     animation: 2s ease-in-out  plat;
     transform: translate(0px,5px);
