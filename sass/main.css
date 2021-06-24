@@ -627,10 +627,11 @@ h1 {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .bloc-resto h2 {
     width: 100%;
-    margin-left: 10px;
   }
   .bloc-resto__card {
     width: 47%;
@@ -638,11 +639,9 @@ h1 {
   }
   .bloc-resto__card .picture2 {
     width: 100%;
-    height: 268px;
   }
   .bloc-resto__card .picture4 {
     width: 100%;
-    height: 226px;
   }
 }
 /*# sourceMappingURL=main.css.map */
