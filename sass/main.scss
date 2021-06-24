@@ -52,7 +52,7 @@ $grey_position: #EFEFEF;
         visibility: hidden;
   }
 }
-
+//section loader spinner//
 .loader {
   position: fixed;
   margin: auto;
@@ -67,7 +67,7 @@ $grey_position: #EFEFEF;
   height: 30px;
   animation: spin 2s linear ;
   animation-fill-mode: forwards;
- 
+  z-index: 9999;
 }
 
 .loading{
@@ -81,7 +81,9 @@ $grey_position: #EFEFEF;
   animation: loader 2s linear;
   background-repeat: no-repeat;
   animation-fill-mode: forwards;
+  z-index: 9999;
 }
+//balises BEM//
 
 .flex
 {
@@ -132,7 +134,7 @@ h1
 {
   font-size: 1em;
 }
-
+//bloc header page acceuil//
 .head0
 {
   text-align: center;
@@ -187,7 +189,11 @@ padding-top: 5px;
 .bloc-function 
 {
   margin-bottom: 40px;
-     h2{  margin-right: 130px;
+  .bloc-fonctionnement{
+    margin: auto;
+    width: 350px;
+  }
+     h2{  
       margin-top: 50px;
     margin-bottom: 30px;
      }
@@ -225,15 +231,19 @@ padding-top: 5px;
       }
  }
 }
-
+//bloc restaurants//
 .bloc-resto
 {
   background-color: $grey-exp;
   padding-bottom: 60px;
+  
 
-    h2{  margin-left: 10px;
+    h2{  
+      margin-right: auto;
       margin-top: 60px;
       margin-bottom: 25px;
+      margin-left: 10px;
+
        }
      &__card{ background-color: white;
       text-decoration: none;
@@ -242,7 +252,6 @@ padding-top: 5px;
       box-shadow: 0px 3px 15px $grey-shadow;
       margin-bottom: 20px;
       position: relative;
-      margin-right: 15px;
       width: 90%;
        &:hover{ box-shadow: 0px 16px 15px $grey-shadow;
                 }
@@ -302,27 +311,26 @@ footer
   {
     background-color: #303030;
     padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 10px;
+    padding-bottom: 30px;
     h1{font-family: 'Shrikhand';
       margin-left: 10px;
       color: white;
       font-size: 1.1em;
       margin-right: 260px;
      }
-  ul
+  p
     { font-family: 'Roboto';
     color: white;
     list-style: none;
     padding-left: 10px;
     white-space: nowrap;
-    li{ margin-bottom: 11px;
+    margin-bottom: 3px;
     }
-  }
+  
   img{ width: auto;
     height: 13px;
-    margin-right: 10px;
-    margin-top: 2px;
+    margin-top: 17px;
+    margin-left: 10px;
   }
 
 }
@@ -345,7 +353,7 @@ h1
 
 .size1{ width: auto;}
 
-
+//bloc header page restaurant//
 .head1
 {
   text-align: center;
@@ -353,12 +361,13 @@ h1
   z-index: 1;
   h4{ font-size: 2em;
     margin-bottom: 10px;
-    margin-left: 60px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 20px;
   }
   img{ height: 20px;
     margin-left: 20px;
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
 .photo
@@ -371,20 +380,43 @@ h1
 
 .card
 {
+
 position: relative;
 z-index: 2;
 margin-top: -60px;
 background-color: #F2F2F2;
 border-radius: 40px 40px 0% 0%;
 width: 100%;
- h4{ font-size: 1.8em;
-  margin-right: 90px;
+ h4{ font-size: 1.6em;
+     margin-right: 40px;
+     white-space: nowrap;
+
  }
- .title_2{
-   margin-right: 20px;
-   white-space: nowrap;
-   margin-left: 10px;
+ .name i {
+   position: relative;
+   top: 38px;
+  font-size: 19px;
+  &:hover::after {
+    content: "\f004";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: linear-gradient(to bottom left,
+    $violet,
+    53%,
+    $pink);
+    -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                opacity: 1;
+                animation: favorite 250ms linear forwards;
  }
+}
+ 
  button{ background-color: #9356DC;
   color: white;
   padding: 15px 45px 15px 45px;
@@ -392,7 +424,8 @@ width: 100%;
   font-size: 0.9em;
   background: linear-gradient(#FF79DA, #9356DC);
   margin-bottom: 70px;
-  margin-left: 90px;
+  margin-left: auto;
+  margin-right: auto;
   border: none;
   margin-top: 50px;
   box-shadow: 3px 5px 9px $greyhead;
@@ -402,12 +435,7 @@ width: 100%;
     }
  }
 }
-.heart
-{
-  height: 22px;
-  margin-top: 43px;
-  padding-right: 23px;
-}
+
 
 .repas 
 {
@@ -431,7 +459,6 @@ width: 100%;
     border-radius: 15px;
     margin-top: 20px;
     width: 95%;
-    margin-left: 10px;
     box-shadow: 3px 8px 9px #D8D4EA;
     animation: 2s ease-in-out  plat;
     transform: translate(0px,5px);
@@ -476,24 +503,47 @@ width: 100%;
         transition-duration: 500ms;
         padding: 0px;
       }
-
-
-
-
-
+    }
   }
-
-
-
-
-
-
-
-  }
-
-
-
-
-
-
 }
+
+
+  @media screen and (min-width: 700px){
+    
+  .bloc-resto{
+    flex-direction: row;
+    flex-wrap:wrap;
+  h2{ 
+     width: 100%;
+     margin-left: 10px;
+    }
+    &__card{ 
+      width: 47%;
+      margin-left: 20px;
+   .picture2{
+     width: 100%;
+     height: 268px;
+   }
+   .picture4{
+     width: 100%;
+     height: 226px;
+
+   }
+
+  }
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  }
+
+
+
+
+

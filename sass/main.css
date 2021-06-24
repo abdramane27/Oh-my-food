@@ -44,8 +44,9 @@
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-            display: none;
-    
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
   }
 }
 
@@ -57,20 +58,34 @@
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-            display: none;
-            visibility: hidden;
-            overflow: hidden;
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
   }
 }
-@keyframes loader {
-  0%{ opacity: 0.6;
-  display: none;}
-  100%{
+
+@-webkit-keyframes loader {
+  0% {
+    opacity: 0.6;
+    display: none;
+  }
+  100% {
     display: none;
     visibility: hidden;
   }
-  
 }
+
+@keyframes loader {
+  0% {
+    opacity: 0.6;
+    display: none;
+  }
+  100% {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 .loader {
   position: fixed;
   margin: auto;
@@ -78,18 +93,19 @@
   right: 0;
   top: 0;
   bottom: 0;
-  border: 7px solid #f3f3f398; 
-  border-top: 7px solid #3498db; 
+  border: 7px solid #f3f3f398;
+  border-top: 7px solid #3498db;
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  animation: spin 2s linear ;
-  animation-fill-mode: forwards;
+  -webkit-animation: spin 2s linear;
+          animation: spin 2s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   z-index: 9999;
- 
 }
 
-.loading{
+.loading {
   position: fixed;
   top: 0;
   left: 0;
@@ -97,14 +113,13 @@
   height: 100%;
   background: #303030;
   opacity: 0.6;
-  animation: loader 2s linear;
+  -webkit-animation: loader 2s linear;
+          animation: loader 2s linear;
   background-repeat: no-repeat;
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   z-index: 9999;
 }
-
-
-
 
 .flex {
   display: -webkit-box;
@@ -120,9 +135,9 @@
 }
 
 .center {
-  -webkit-box-align: flex-start;
-      -ms-flex-align: flex-start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .space {
@@ -141,9 +156,9 @@
 
 .size {
   width: 100%;
-
 }
-.border{
+
+.border {
   border-radius: 20px 20px 0% 0%;
 }
 
@@ -163,7 +178,6 @@ h1 {
 .head0 {
   text-align: center;
   border-bottom: 2px solid #CECECE;
- 
 }
 
 .head0 h4 {
@@ -177,7 +191,6 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #EFEFEF;
- 
 }
 
 .bloc-position img {
@@ -195,7 +208,6 @@ h1 {
   text-align: center;
   background-color: #F2F2F2;
   padding-top: 5px;
-  
 }
 
 .bloc-explore__text {
@@ -227,8 +239,12 @@ h1 {
   margin-bottom: 40px;
 }
 
+.bloc-function .bloc-fonctionnement {
+  margin: auto;
+  width: 350px;
+}
+
 .bloc-function h2 {
-  margin-right: 130px;
   margin-top: 50px;
   margin-bottom: 30px;
 }
@@ -241,9 +257,10 @@ h1 {
   margin-bottom: 30px;
   -webkit-box-shadow: 3px 4px 9px #D8D4EA;
           box-shadow: 3px 4px 9px #D8D4EA;
+  padding-right: 70px;
   white-space: nowrap;
   padding-bottom: 10px;
-  width: 90%;
+  margin-right: 10px;
 }
 
 .bloc-function__card:hover {
@@ -283,14 +300,13 @@ h1 {
 .bloc-resto {
   background-color: #F2F2F2;
   padding-bottom: 60px;
-  
-  
 }
 
 .bloc-resto h2 {
-  margin-left: 12px;
+  margin-right: auto;
   margin-top: 60px;
   margin-bottom: 25px;
+  margin-left: 10px;
 }
 
 .bloc-resto__card {
@@ -302,9 +318,7 @@ h1 {
           box-shadow: 0px 3px 15px #D8D4EA;
   margin-bottom: 20px;
   position: relative;
-  margin-left: 17px;
   width: 90%;
-  
 }
 
 .bloc-resto__card:hover {
@@ -347,7 +361,6 @@ h1 {
   position: absolute;
   right: 10px;
   bottom: 30px;
-  padding-right: 10px;
   font-size: 23px;
 }
 
@@ -361,7 +374,6 @@ h1 {
   right: 0;
   bottom: 0;
   z-index: 0;
-  padding-right: 10px;
   background: -webkit-gradient(linear, right top, left bottom, from(#9356DC), color-stop(53%), to(#FF79DA));
   background: linear-gradient(to bottom left, #9356DC, 53%, #FF79DA);
   -webkit-background-clip: text;
@@ -374,8 +386,7 @@ h1 {
 footer {
   background-color: #303030;
   padding-top: 10px;
-  padding-bottom: 20px;
-  
+  padding-bottom: 30px;
 }
 
 footer h1 {
@@ -386,23 +397,20 @@ footer h1 {
   margin-right: 260px;
 }
 
-footer ul {
+footer p {
   font-family: 'Roboto';
   color: white;
   list-style: none;
   padding-left: 10px;
   white-space: nowrap;
-}
-
-footer ul li {
-  margin-bottom: 11px;
+  margin-bottom: 3px;
 }
 
 footer img {
   width: auto;
   height: 13px;
-  margin-right: 10px;
-  margin-top: 2px;
+  margin-top: 17px;
+  margin-left: 10px;
 }
 
 .card h4, header h4 {
@@ -434,14 +442,15 @@ h1 {
 .head1 h4 {
   font-size: 2em;
   margin-bottom: 10px;
-  margin-left: 60px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 20px;
 }
 
 .head1 img {
   height: 20px;
   margin-left: 20px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .photo {
@@ -457,18 +466,38 @@ h1 {
   margin-top: -60px;
   background-color: #F2F2F2;
   border-radius: 40px 40px 0% 0%;
- 
+  width: 100%;
 }
 
 .card h4 {
-  font-size: 1.8em;
-  margin-right: 90px;
+  font-size: 1.6em;
+  margin-right: 40px;
+  white-space: nowrap;
 }
 
-.card .title_2 {
-  margin-right: 20px;
-  white-space: nowrap;
-  margin-left: 15px;
+.card .name i {
+  position: relative;
+  top: 38px;
+  font-size: 19px;
+}
+
+.card .name i:hover::after {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background: -webkit-gradient(linear, right top, left bottom, from(#9356DC), color-stop(53%), to(#FF79DA));
+  background: linear-gradient(to bottom left, #9356DC, 53%, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+  -webkit-animation: favorite 250ms linear forwards;
+          animation: favorite 250ms linear forwards;
 }
 
 .card button {
@@ -480,9 +509,10 @@ h1 {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   margin-bottom: 70px;
+  margin-left: auto;
+  margin-right: auto;
   border: none;
   margin-top: 50px;
-  margin-left: 90px;
   -webkit-box-shadow: 3px 5px 9px #CECECE;
           box-shadow: 3px 5px 9px #CECECE;
 }
@@ -494,12 +524,6 @@ h1 {
           box-shadow: 3px 10px 9px #CECECE;
 }
 
-.heart {
-  height: 22px;
-  margin-top: 43px;
-  
-}
-
 .repas {
   width: 95%;
 }
@@ -508,7 +532,6 @@ h1 {
   border-bottom: 4px solid #99E2D0;
   width: 10%;
   padding-bottom: 5px;
-  margin-left: 15px;
 }
 
 .repas .title {
@@ -516,7 +539,6 @@ h1 {
   width: 10%;
   padding-bottom: 5px;
   margin-top: 40px;
-  margin-left: 15px;
 }
 
 .repas .plat {
@@ -525,7 +547,6 @@ h1 {
   border-radius: 15px;
   margin-top: 20px;
   width: 95%;
-  margin-left: 10px;
   -webkit-box-shadow: 3px 8px 9px #D8D4EA;
           box-shadow: 3px 8px 9px #D8D4EA;
   -webkit-animation: 2s ease-in-out  plat;
@@ -596,5 +617,32 @@ h1 {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   padding: 0px;
+}
+
+@media screen and (min-width: 700px) {
+  .bloc-resto {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .bloc-resto h2 {
+    width: 100%;
+    margin-left: 10px;
+  }
+  .bloc-resto__card {
+    width: 47%;
+    margin-left: 20px;
+  }
+  .bloc-resto__card .picture2 {
+    width: 100%;
+    height: 268px;
+  }
+  .bloc-resto__card .picture4 {
+    width: 100%;
+    height: 226px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
