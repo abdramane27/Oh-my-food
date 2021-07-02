@@ -46,8 +46,7 @@ $grey_position: #EFEFEF;
 
 @keyframes loader {
   0% { opacity: 0.6;
-        display: none;
-      }
+        }
   100%{ display: none;
         visibility: hidden;
   }
@@ -125,12 +124,12 @@ p
   font-family: 'Roboto';
   font-size: 1em;
 }
-h2, h1
+h2, h1, h3
 {
   font-family: 'Roboto';
 
 }
-h1
+h3
 {
   font-size: 1em;
 }
@@ -140,12 +139,12 @@ h1
   text-align: center;
   border-bottom: 2px solid $greyhead;
 
-    h4 { font-family: 'Shrikhand';
+    h1 { font-family: 'Shrikhand';
       font-size: 2em;
       margin-bottom: 10px;
     }
 }
-
+//bloc localisation//
 .bloc-position 
 {
   justify-content: center;
@@ -200,10 +199,9 @@ padding-top: 5px;
      &__card{ background-color: $grey-exp;
       border-radius: 20px;
       padding-top: 10px;
-      margin-left: 20px;
+      margin-left: 10px;
       margin-bottom: 30px;
       box-shadow: 3px 4px 9px $grey-shadow;
-      padding-right: 70px;
       white-space: nowrap;
       padding-bottom: 10px;
       margin-right: 10px;
@@ -215,17 +213,15 @@ padding-top: 5px;
         padding-right: 7px;
         padding-left: 7px;
         margin-left: -12px;
-        margin-top: 10px;
          .numero{ font-size: 0.9em;
           margin-top: 3px;
           margin-bottom: 3px;
           color: white;
-          margin-left: 3px;}
+          margin-left: 2px;}
       }
       img{ width: auto;
         height: 17px;
       margin-left: 25px;
-      margin-top: 13px;
     }
       p{ margin-left: 30px;
       }
@@ -245,6 +241,10 @@ padding-top: 5px;
       margin-left: 10px;
 
        }
+      h3{
+        margin-top: 10px;
+        margin-bottom: 8px;
+      }
      &__card{ background-color: white;
       text-decoration: none;
       margin-top: 5px;
@@ -279,8 +279,14 @@ padding-top: 5px;
             }
             i{ position: absolute;
               right: 10px;
-              bottom: 30px;
-              font-size: 23px;
+              bottom: 20px;
+              font-size: 21px;
+              &::after{
+                background: none;
+                opacity: 0;
+                transition: all 1s;
+                content:"";
+              }
               &:hover::after {
                 content: "\f004";
                 font-family: "Font Awesome 5 Free";
@@ -300,7 +306,8 @@ padding-top: 5px;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 opacity: 1;
-                animation: favorite 250ms linear forwards;
+                
+                
               }
 
             }
@@ -312,7 +319,7 @@ footer
     background-color: #303030;
     padding-top: 10px;
     padding-bottom: 30px;
-    h1{font-family: 'Shrikhand';
+    h3{font-family: 'Shrikhand';
       margin-left: 10px;
       color: white;
       font-size: 1.1em;
@@ -339,16 +346,16 @@ footer
 
 
 
-.card h4, header h4
+.card h2, header h1
 { font-family: 'Shrikhand';}
 
-p, h2, h1, .card button, strong
+p, h3, h4, .card button, strong
 { font-family: 'Roboto';}
 
 p
 {font-size: 0.9em;}
 
-h1
+h3
 {font-size: 1em;}
 
 .size1{ width: auto;}
@@ -359,7 +366,7 @@ h1
   text-align: center;
   border-bottom: 2px solid $greyhead;
   z-index: 1;
-  h4{ font-size: 2em;
+  h1{ font-size: 2em;
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -373,29 +380,37 @@ h1
 .photo
 {
   width: 100%;
-  height: 280px;
   position: relative;
   z-index: 1;
 }
 //bloc principal//
 .card
 {
-
-position: relative;
-z-index: 2;
-margin-top: -60px;
-background-color: #F2F2F2;
-border-radius: 40px 40px 0% 0%;
-width: 100%;
- h4{ font-size: 1.6em;
+  position: relative;
+  z-index: 2;
+  margin-top: -50px;
+  background-color: #F2F2F2;
+  border-radius: 40px 40px 0% 0%;
+      width: 100%;
+ h2{ font-size: 1.5em;
      margin-right: 40px;
      white-space: nowrap;
-
+    }
+ h3{
+   margin-bottom: 5px;
+   margin-top: 12px;
+   font-size: 0.9em;
  }
  .name i {
    position: relative;
-   top: 38px;
+   top: 25px;
   font-size: 19px;
+  &::after{
+    background: none;
+    opacity: 0;
+    transition: all 1s;
+    content:"";
+  }
   &:hover::after {
     content: "\f004";
     font-family: "Font Awesome 5 Free";
@@ -406,15 +421,18 @@ width: 100%;
     right: 0;
     bottom: 0;
     z-index: 0;
-    background: linear-gradient(to bottom left,
-    $violet,
-    53%,
-    $pink);
+    background: linear-gradient(
+      to bottom left,
+      $violet,
+      53%,
+      $pink
+    );
     -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                opacity: 1;
-                animation: favorite 250ms linear forwards;
- }
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    
+    
+  }
 }
  
  button{ background-color: #9356DC;
@@ -475,15 +493,15 @@ width: 100%;
     }
    }
    .name{ width: 100%;
-     h1{
-       margin-bottom: 5px;
-       }
-       p{overflow: hidden;
-         white-space: nowrap;}
+         p{
+           overflow: hidden;
+         white-space: nowrap;
+        font-size: 0.8em;
+      }
     }
 
    strong{
-     font-size: 0.9em;
+     font-size: 0.8em;
     margin-right: 20px;
    }
    .check{
@@ -497,7 +515,7 @@ width: 100%;
       i{
         color: white;
         font-size: 1.5em;
-        margin-top: 25px;
+        margin-top: 20px;
         transition: ease-in-out;
         transition-property: transform;
         transition-duration: 500ms;
