@@ -116,7 +116,10 @@ $grey_position: #EFEFEF;
 {
   border-radius: 20px 20px 0% 0%;
 }
-
+.linkend
+{
+  margin-bottom: 15px;
+}
 
 
 p
@@ -339,6 +342,12 @@ footer
     margin-top: 17px;
     margin-left: 10px;
   }
+  a{ font-family: 'Roboto';
+    color: white;
+    
+    padding-left: 10px;
+    text-decoration: none;
+    }
 
 }
 
@@ -352,7 +361,7 @@ footer
 p, h3, h4, .card button, strong
 { font-family: 'Roboto';}
 
-p
+p,a
 {font-size: 0.9em;}
 
 h3
@@ -486,6 +495,8 @@ h3
     .name{ width: 80%;
            transition: width 1s ease-in-out;
       p{ text-overflow: ellipsis;}
+      h3{text-overflow: ellipsis;}
+      
     }
     .check{ width: 20%;
        i{ transform: rotate(1turn);
@@ -497,6 +508,11 @@ h3
            overflow: hidden;
          white-space: nowrap;
         font-size: 0.8em;
+      }
+      h3{
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 0.9em;
       }
     }
 

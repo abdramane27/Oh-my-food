@@ -160,6 +160,10 @@
   border-radius: 20px 20px 0% 0%;
 }
 
+.linkend {
+  margin-bottom: 15px;
+}
+
 p {
   font-family: 'Roboto';
   font-size: 1em;
@@ -419,6 +423,13 @@ footer img {
   margin-left: 10px;
 }
 
+footer a {
+  font-family: 'Roboto';
+  color: white;
+  padding-left: 10px;
+  text-decoration: none;
+}
+
 .card h2, header h1 {
   font-family: 'Shrikhand';
 }
@@ -427,7 +438,7 @@ p, h3, h4, .card button, strong {
   font-family: 'Roboto';
 }
 
-p {
+p, a {
   font-size: 0.9em;
 }
 
@@ -584,6 +595,10 @@ h3 {
   text-overflow: ellipsis;
 }
 
+.repas .plat:hover .name h3 {
+  text-overflow: ellipsis;
+}
+
 .repas .plat:hover .check {
   width: 20%;
 }
@@ -601,6 +616,12 @@ h3 {
   overflow: hidden;
   white-space: nowrap;
   font-size: 0.8em;
+}
+
+.repas .plat .name h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.9em;
 }
 
 .repas .plat strong {
